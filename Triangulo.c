@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include <math.h>
 
 int main(){
 
-    float a, b, c, cal;
+    float a, b, c, cal, area;
 
     printf("Escreva o primeiro valor:\n");
     scanf("%f", &a);
@@ -20,7 +21,8 @@ int main(){
     }
 
     cal = ((a + b + c) / 2);
+    area = sqrt(cal)*(cal - a)+(cal - b)+(cal - c);
 
-    printf("A área do triângulo é de %f",cal);
+    printf("A área do triângulo é de %.2f", area);
     return 0;
 }
